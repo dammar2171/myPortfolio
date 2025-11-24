@@ -119,9 +119,8 @@
 
 /* For small screens */
 @media (max-width: 768px) {
-  .icon {
-   font-size: 1rem;
-   padding: 1rem;
+    .icon {
+        font-size: 1.6rem !important;
     }
   .sidebar {
     left: -260px;
@@ -150,5 +149,8 @@
     padding-top: 0;
     gap: 5px;
 }
+.sidebar_btn {
+    font-size: 1rem;
+  }
   
 }

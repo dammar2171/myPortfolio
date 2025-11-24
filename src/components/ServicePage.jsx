@@ -13,7 +13,6 @@ const services = [
       "Clean Code",
       "Fully Functional",
     ],
-    price: "RS5,000",
   },
   {
     title: "Responsive Design",
@@ -25,7 +24,6 @@ const services = [
       "Pixel Perfect UI",
       "Fast Loading",
     ],
-    price: "RS6,500",
   },
   {
     title: "Custom Web Apps",
@@ -37,7 +35,6 @@ const services = [
       "PDF/Image Uploads",
       "Role-Based Access",
     ],
-    price: "RS10,000",
   },
   {
     title: "E-commerce Setup",
@@ -49,7 +46,6 @@ const services = [
       "Order Management",
       "Admin Panel",
     ],
-    price: "RS8500",
   },
   {
     title: "Bug Fixing & Optimization",
@@ -61,7 +57,6 @@ const services = [
       "Code Refactoring",
       "Responsive Fixes",
     ],
-    price: "RS7000",
   },
   {
     title: "Maintenance & Updates",
@@ -73,7 +68,6 @@ const services = [
       "Backup Management",
       "New Feature Add-ons",
     ],
-    price: "RS8000",
   },
 ];
 
@@ -100,8 +94,13 @@ const ServicePage = ({ setActive }) => {
                   <li key={idx}>✔ {feature}</li>
                 ))}
               </ul>
-              <p className="price">Starting at {service.price}</p>
-              <button className="get-started-btn">Get Started ➜</button>
+
+              <button
+                className="get-started-btn"
+                onClick={() => setActive("contact")}
+              >
+                Get Started ➜
+              </button>
             </div>
           ))}
         </div>

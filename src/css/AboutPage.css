@@ -115,7 +115,7 @@ hr{
   }
 
   .about-top {
-    margin-left: 70px;
+    margin: 0 auto;
     margin-top: 20px;
     font-size: 15px;
     padding: 10px 15px;
@@ -124,7 +124,7 @@ hr{
   }
 
   .about-heading {
-    font-size: 32px;
+    font-size: 1.6rem;
     margin: 10px 0 10px 0;
     text-align: center;
   }

@@ -181,13 +181,27 @@ form button:hover {
     font-size: 0.85rem;
   }
 
+  .right-form h3 {
+    font-weight: 900;
+    font-size: 1rem;
+  }
+  .left-info h3 {
+    text-align: center;
+  }
   .right-form p,
   .left-info p {
     font-size: 0.9rem;
+  }
+
+  .left-info p {
+    margin-bottom: 7px !important;
   }
 
   form button {
     font-size: 0.9rem;
     padding: 10px;
   }
+  .info-box a {
+       font-size: 0.8rem;
+}
 }

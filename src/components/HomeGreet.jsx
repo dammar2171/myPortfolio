@@ -4,8 +4,8 @@ import { FaDownload } from "react-icons/fa6";
 const HomeGreet = ({ setActive }) => {
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/dammar.pdf";
-    link.download = "dammar.pdf";
+    link.href = "/myCV.pdf";
+    link.download = "myCV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
