@@ -1,0 +1,68 @@
+.custom-main-content {
+  transition: margin-left 0.3s ease, opacity 0.3s ease;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Desktop default */
+@media (min-width: 769px) {
+  .custom-main-content {
+    margin-left: 260px;
+  }
+}
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  .custom-main-content {
+    margin-left: 0; /* no space when sidebar is hidden */
+    padding: 15px;  /* smaller padding for mobile */
+  }
+
+  /* Hide content when sidebar is open */
+  .hide-content {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Dark and light mode toggle */
+.light-theme {
+  background: #f8f9fa;
+  color: #212529;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-theme {
+  background: #121212;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Sidebar base */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* hidden by default */
+  width: 260px;
+  height: 100vh;
+  background-color: #222;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+/* When open */
+.sidebar.open {
+  left: 0;
+}
+
+/* Overlay for mobile when sidebar is open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}

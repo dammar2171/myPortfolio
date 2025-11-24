@@ -1,0 +1,239 @@
+.main-card-experience {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+.experince-heading{
+  font-size: 32px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+#my-intro-experience{
+  margin: 10px 15px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.card-experience {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+   margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+.addresses{
+  color: rgba(63, 61, 61, 0.445);
+}
+.card-experience:hover {
+  transform: translateY(-5px);
+}
+.experience-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #222;
+}
+.experience-key{
+  font-size: 1rem;
+  margin-top: 1rem;
+  color: #222;
+}
+.line-experience{
+  margin-top: 1rem;
+  height: 1px;
+  width: 100%;
+  background: #8b878e3a;
+  box-shadow: 0 0 10px #9d99a1, 0 0 20px #98939f42;
+}
+.experience-desc {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+.technology-experience {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-span {
+  background: #eef1f8;
+  color: #444;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.experience-ul li{
+  color: rgba(128, 125, 125, 0.605);
+}
+
+/* qualification card css*/
+
+.heading-education{
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cardContainer-qualification {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 20px;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.card-qualification {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px 25px;
+  width: 265px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card-qualification:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.card-qualification h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #3b3b3b;
+  font-weight: 700;
+}
+
+.school-name {
+  font-size: 1rem;
+  color: #666;
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.subject {
+  font-size: 1rem;
+  color: #555;
+  margin: 4px 0 12px;
+  font-style: italic;
+}
+
+.date-gpa {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.gpa {
+  color: #0077cc;
+}
+
+/* Existing styles unchanged above */
+
+/* === Mobile & Tablet === */
+@media (max-width: 768px) {
+  .main-card-experience {
+    padding: 1rem;
+    margin: 0;
+    min-width: 20rem;
+  }
+
+      .experience-heading {
+        font-size: 32px;
+        margin: 10px 0 10px 0;
+        text-align: center;
+    }
+        #my-intro-experience {
+        margin: 5px 15px;
+        font-size: 16px;
+        text-align: -webkit-center;
+    }
+
+  .card-experience {
+    max-width: 100%;
+    padding: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .experience-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .experience-key {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .experience-desc {
+    font-size: 0.9rem;
+    text-align: justify;
+    margin-top: 0.25rem;
+  }
+
+  .technology-experience {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .experience-span {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .experience-ul li {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  /* Qualification Cards */
+  .heading-education {
+    font-size: 24px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .cardContainer-qualification {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+    padding: 15px 10px;
+  }
+
+  .card-qualification {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 15px 20px;
+  }
+
+  .card-qualification h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .school-name,
+  .subject,
+  .date-gpa {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .date-gpa {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    align-items: center;
+  }
+}
+
+

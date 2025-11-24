@@ -1,0 +1,234 @@
+.main-div {
+  position: relative;
+  overflow: visible;
+   min-height: 100vh; /* ensures it fills the screen */
+  padding-bottom: 50px;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: #ff6b6b6f;
+  border-radius: 50%;
+  top: 8%;
+  left: 5%;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #6bc4ff77;
+  top: 30%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.rectangle {
+  width: 200px;
+  height: 80px;
+  background-color: #ffd166a8;
+  bottom: 2%;
+  right: 1%;
+}
+
+
+
+.home-greet{
+ background-color: rgba(171, 153, 225, 0.2);
+  border-radius: 15px;
+  padding: 0 20px 10px 20px;
+  margin-left: 350px;
+  align-items: center;
+  margin-top: 50px;
+  color: rgb(73, 5, 220);
+  display: flex;
+  gap: 10px; 
+  width: fit-content; 
+}
+.home-intro{
+font-size: 45px;
+font-weight: bold;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 8px 0 0 250px;
+}
+#name{
+  font-size: 50px;
+  color: rgb(77, 14, 155);
+}
+#web-developer {
+  font-size: 30px;
+  margin: 5px 0 0 390px;
+  color: rgba(95, 51, 150, 0.9);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(95, 51, 150, 0.9); /* Typing cursor */
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, removeCursor 0s 3s forwards;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 25%; } /* Or 100% if you prefer */
+}
+
+/* Remove cursor after typing */
+@keyframes removeCursor {
+  to { border-right: none; }
+}
+
+#my-intro{
+  margin:5px 0 0 50px ;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgba(95, 51, 150, 0.545);
+}
+.home-btn-group{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+#view-work-btn{
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  background-color: rgb(92, 62, 152);
+  cursor: pointer;
+   transition: all 0.3s ease;
+}
+#view-work-btn:hover{
+  background-color: rgb(66, 43, 110); 
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05);
+}
+#download-resume-btn{
+  border-radius: 10px;
+  border: none;
+  padding: 5px 15px 5px 15px;
+  color: white;
+  background-color: rgb(207, 79, 162);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#download-resume-btn:hover {
+  background-color: rgb(172, 57, 135);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+#lets-talk-btn{
+  border: none;
+ border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  color: rgb(91, 80, 80);
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#lets-talk-btn:hover{
+  transform: scale(1.05);
+}
+#home-quote{
+  text-align: center;
+  margin-top: 30px;
+  color: rgba(39, 6, 158, 0.349);
+}
+
+/* === Base Desktop Styles (Your Existing Styles) === */
+/* Keep your existing styles here (no change to them) */
+
+
+/* === Mobile & Tablet Adjustments === */
+@media (max-width: 768px) {
+  .home-greet {
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 5px 15px;
+    justify-content: center;
+  }
+  .main-div {
+    padding-bottom: 1px;
+}
+
+  .home-intro {
+    font-size: 28px;
+    margin: 0 0 0 0;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  #name {
+    font-size: 30px;
+    display: inline-block;
+  }
+
+  #web-developer {
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: auto;
+    border-right: none; /* Remove cursor effect on small screens for clarity */
+    animation: none; /* Disable typing effect if it looks cramped */
+  }
+
+  #my-intro {
+    margin: 0 15px 15px 15px;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .home-btn-group {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  #view-work-btn,
+  #download-resume-btn,
+  #lets-talk-btn {
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+  }
+
+  #home-quote {
+    font-size: 14px;
+    margin: 10px 2px 0;
+    text-align: center;
+  }
+
+  /* Shapes - hide or resize for mobile to prevent overflow */
+  .shape {
+    opacity: 0.1;
+  }
+  .circle {
+    width: 80px;
+    height: 80px;
+    top: 5%;
+    left: 5%;
+  }
+  .square {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 80%;
+  }
+  .rectangle {
+    width: 120px;
+    height: 50px;
+    bottom: 27%;
+    right: 5%;
+  }
+}

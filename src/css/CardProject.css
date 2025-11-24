@@ -1,0 +1,171 @@
+.main-card-project {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.featured-title {
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.card-project {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.card-project:hover {
+  transform: translateY(-5px);
+}
+
+.top-image {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.top-image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #222;
+}
+
+.project-desc {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.technology {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology span {
+  background: #eef1f8;
+  color: #444;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.btn-group-project {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.live-demo {
+  background-color: #6d28d9;
+  color: white;
+}
+
+.github {
+  border: 2px solid #6d28d9;
+  color: #6d28d9;
+}
+
+.live-demo:hover {
+  background-color: #5b21b6;
+}
+
+.github:hover {
+  background-color: #6d28d9;
+  color: white;
+}
+
+/* === Mobile & Tablet === */
+@media (max-width: 768px) {
+  .main-card-project {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .featured-title {
+    margin-left: 0;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .card-project {
+    max-width: 100%;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .top-image {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    overflow: visible !important;
+    width: 100% !important;
+    min-height: 150px;
+  }
+
+  .top-image img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+
+  .technology {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .technology span {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .btn-group-project {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 5px 0;
+    text-align: center;
+  }
+}

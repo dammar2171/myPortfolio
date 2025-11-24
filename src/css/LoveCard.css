@@ -1,0 +1,61 @@
+.love-card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2 columns */
+  gap: 20px; /* space between boxes */
+  max-width: 100%; /* optional, for layout control */
+  margin: auto; /* center the grid */
+  padding: 20px;
+}
+.card{
+  background-color: #f3f0f0c9;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.heading-card{
+font-size: larger;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bolder;
+color: rgb(107, 103, 103);
+}
+.card-content{
+font-size: large;
+font-family: 'Times New Roman', Times, serif;
+font-weight: 500;
+color: rgba(104, 102, 102, 0.628);
+}
+.icon{
+  color: black;
+}
+/* Base styles remain unchanged */
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  .love-card {
+    grid-template-columns: 1fr; /* single column */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .heading-card {
+    font-size: 1.2rem; /* slightly smaller font */
+  }
+
+  .card-content {
+    font-size: 1rem; /* slightly smaller font */
+  }
+
+  .icon {
+    font-size: 2rem; /* make icons a bit bigger for clarity */
+  }
+}
