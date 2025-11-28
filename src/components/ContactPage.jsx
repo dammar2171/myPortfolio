@@ -1,21 +1,48 @@
 import "../css/ContactPage.css";
-import { MdContactMail } from "react-icons/md";
+import { MdContactMail, MdEmail } from "react-icons/md";
 import { IoIosSend } from "react-icons/io";
-import { MdEmail } from "react-icons/md";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
+
 const ContactPage = () => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_vcvw81o",
+        "template_axiruab",
+        formRef.current,
+        "UMqwTLLl13mOUU8IQ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Email sent successfully!");
+          formRef.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send email. Try again later.");
+        }
+      );
+  };
+
   return (
     <>
       <div className="about-top">
-        <MdContactMail />
-        About me
+        <MdContactMail /> About Me
       </div>
       <div className="about-heading">Let's Work Together</div>
       <p id="my-intro-about">
         Have a project in mind? I'd love to hear about it. Send me a message and
         let's create something amazing together.
       </p>
+
       <div className="contact-container">
         <div className="contact-content">
           <div className="left-info">
@@ -27,17 +54,17 @@ const ContactPage = () => {
 
             <div className="info-box">
               <h4>
-                <MdEmail />
-                Email
+                <MdEmail /> Email
               </h4>
               <p>Send me an email anytime</p>
-              <a href="dammarbhatt111@gmail.com">dammarbhatt111@gmail.com</a>
+              <a href="mailto:dammarbhatt111@gmail.com">
+                dammarbhatt111@gmail.com
+              </a>
             </div>
 
             <div className="info-box">
               <h4>
-                <FaPhoneSquareAlt />
-                Phone
+                <FaPhoneSquareAlt /> Phone
               </h4>
               <p>Sun-Fri from 9am to 6pm</p>
               <a href="tel:+9779805752792">+977 9805752792</a>
@@ -45,11 +72,10 @@ const ContactPage = () => {
 
             <div className="info-box">
               <h4>
-                <FaLocationDot />
-                Location
+                <FaLocationDot /> Location
               </h4>
               <p>Available for remote work</p>
-              <a href="#">Bekot-03 kanchanpur, Nepal</a>
+              <a href="#">Bekot-03 Kanchanpur, Nepal</a>
             </div>
 
             <div className="availability">
@@ -65,27 +91,30 @@ const ContactPage = () => {
             <p>
               Fill out the form below and I’ll get back to you within 24 hours.
             </p>
-            <form>
+
+            <form ref={formRef} onSubmit={sendEmail}>
               <div className="form-row">
-                <input type="text" placeholder="Name" required />
-                <input type="email" placeholder="Email" required />
+                <input type="text" name="name" placeholder="Name" required />
               </div>
-              <input type="text" placeholder="Subject" required />
               <div className="form-row">
-                <select>
-                  <option>Select budget range</option>
-                  <option>Below RS5000</option>
-                  <option>RS5000–RS10000</option>
-                  <option>Above RS10000</option>
-                </select>
-                <select>
-                  <option>Select timeline</option>
-                  <option>1 week</option>
-                  <option>2–4 weeks</option>
-                  <option>1–2 months</option>
-                </select>
+                <input type="email" name="email" placeholder="Email" required />
               </div>
-              <textarea rows="4" placeholder="Message"></textarea>
+              <div className="form-row">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div className="form-row">
+                <textarea
+                  name="message"
+                  rows="4"
+                  placeholder="Message"
+                  required
+                />
+              </div>
               <button type="submit">
                 Send Message <IoIosSend />
               </button>
@@ -96,4 +125,5 @@ const ContactPage = () => {
     </>
   );
 };
+
 export default ContactPage;

@@ -4,21 +4,20 @@
   overflow-y: auto;
 }
 
-/* Desktop default */
+
 @media (min-width: 769px) {
   .custom-main-content {
     margin-left: 260px;
   }
 }
 
-/* Mobile / Tablet */
+
 @media (max-width: 768px) {
   .custom-main-content {
-    margin-left: 0; /* no space when sidebar is hidden */
-    padding: 15px;  /* smaller padding for mobile */
+    margin-left: 0; 
+    padding: 15px;  
   }
 
-  /* Hide content when sidebar is open */
   .hide-content {
     opacity: 0;
     pointer-events: none;

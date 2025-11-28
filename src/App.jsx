@@ -18,15 +18,13 @@ function App() {
   return (
     <>
       <div className={darkMode ? "dark-theme" : "light-theme"}>
-        {/* Hamburger Button (Mobile Only) */}
+       
         <button
           className="menu-toggle"
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         >
           ☰
         </button>
-
-        {/* Overlay for mobile */}
         {isSidebarOpen && window.innerWidth <= 768 && (
           <div
             className="overlay"

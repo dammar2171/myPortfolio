@@ -5,29 +5,23 @@ import LoveCard from "./LoveCard";
 import { useState, useEffect } from "react";
 
 const AboutPage = ({ active }) => {
-  // Target numbers for quick facts
   const targets = {
     projects: 10,
     years: 1,
     clients: 10,
     satisfaction: 100,
   };
-
-  // States for counters, initially zero
   const [projectsCount, setProjectsCount] = useState(0);
   const [yearsCount, setYearsCount] = useState(0);
   const [clientsCount, setClientsCount] = useState(0);
   const [satisfactionCount, setSatisfactionCount] = useState(0);
 
   useEffect(() => {
-    // Only start counting if AboutPage is active (optional)
     if (!active) return;
-
-    // Helper function to animate count up
     const animateCount = (target, setter) => {
       let start = 0;
-      const duration = 3000; // total animation time in ms
-      const intervalTime = 100; // update interval in ms
+      const duration = 3000;
+      const intervalTime = 100;
       const increment = Math.ceil(target / (duration / intervalTime));
 
       const interval = setInterval(() => {
